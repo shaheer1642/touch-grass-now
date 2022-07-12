@@ -1,2 +1,2 @@
-web: node ./server.js
-worker: cd ./client && npm i && npm start
+worker: npm start
+web: cd ./server && npm i && node ./server.js
