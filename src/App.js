@@ -1,6 +1,8 @@
 
 import grass from './grass.png';
 import React, { Component } from 'react';
+import Button from '@mui/material/Button';
+
 import './App.css';
 
 class App extends Component {
@@ -29,7 +31,7 @@ class App extends Component {
 "You get some pennies for your clicks, while you could make 10-100 times more with any actual work in the same time."
 "We added the new PyramidGrass ©️ system, a pyramid scheme, where you can invest your earnings, until we pull the rug."
 "Help us get rich. Say NO to other social media sites and webpages, where they do the same, pretending they are making actual content for your money. Wake up! And touch grass! 🟩 "</h5>
-      <button onClick={() => this.setState({touchCounter: this.state.touchCounter+1}) }>Touch grass</button>
+      <Button variant="outlined" size="large" onClick={() => this.setState({touchCounter: this.state.touchCounter+1}) }></Button>
       <h1>You have touched the grass {this.state.touchCounter} times</h1>
       </header>
       </div>
