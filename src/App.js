@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+
 import grass from './grass.png';
-import Button from '@mui/material/Button';
+import React, { Component } from 'react';
 import './App.css';
 
 class App extends Component {
+  
   constructor(props){ 
     super(props) 
         
@@ -14,22 +15,6 @@ class App extends Component {
   };
 
   } 
-
-  componentDidMount() {
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
-  }
-    // fetching the GET route from the Express server which matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
 
   render() {
     return (
@@ -44,7 +29,7 @@ class App extends Component {
 "You get some pennies for your clicks, while you could make 10-100 times more with any actual work in the same time."
 "We added the new PyramidGrass ©️ system, a pyramid scheme, where you can invest your earnings, until we pull the rug."
 "Help us get rich. Say NO to other social media sites and webpages, where they do the same, pretending they are making actual content for your money. Wake up! And touch grass! 🟩 "</h5>
-      <Button variant="outlined" color="success" size="large" onClick={() => this.setState({touchCounter: this.state.touchCounter+1}) }>Touch grass</Button>
+      <button onClick={() => this.setState({touchCounter: this.state.touchCounter+1}) }>Touch grass</button>
       <h1>You have touched the grass {this.state.touchCounter} times</h1>
       </header>
       </div>
